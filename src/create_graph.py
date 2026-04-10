@@ -21,18 +21,17 @@ def build_graph():
     # Add edges with weights
     edges = [
         ("Dana", "Carpenter", 2),
-        ("Carpenter", "Clevland", 2),
-        ("Clevland", "Todd", 2),
+        ("Carpenter", "Clevland", 1),
+        ("Clevland", "Todd", 5),
         ("Todd", "CUE", 2),
 
         ("Todd", "Chinook", 3),
-        ("Todd", "CUB", 3),
+        ("Todd", "CUB", 1),
         ("Todd", "Spark", 3),
 
         ("CUB", "Chinook", 2),
         ("CUB", "CUE", 2),
 
-        # NEW EDGE
         ("Spark", "Clevland", 3),
     ]
 
