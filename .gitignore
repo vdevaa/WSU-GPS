@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# WSU-GPS local map verification artifacts
+data/wsu_pullman_map.png
+data/campus_locations_calibrated.csv
+output/

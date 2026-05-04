@@ -1,0 +1,86 @@
+from,to,weight
+Albrook,Sloan Hall,2
+Sloan Hall,Electrical-Mechanical Engineering Building,1
+Sloan Hall,Walkway: West College Mall,2
+Dana,Electrical-Mechanical Engineering Building,1
+Dana,Carpenter Hall,1
+Dana,Walkway: West College Mall,1
+Carpenter Hall,Walkway: West College Mall,1
+Carpenter Hall,Daggy Hall,1
+Carpenter Hall,Heald Hall,2
+Electrical-Mechanical Engineering Building,Walkway: West College Mall,2
+Walkway: West College Mall,Walkway: Central College Mall,2
+Walkway: West College Mall,Heald Hall,2
+Walkway: Central College Mall,Heald Hall,1
+Walkway: Central College Mall,Abelson Hall,1
+Walkway: Central College Mall,Walkway: Cleveland Spark Path,1
+Heald Hall,Abelson Hall,1
+Heald Hall,Cleveland Hall,1
+Abelson Hall,Fulmer Complex,1
+Abelson Hall,Todd Hall,2
+Cleveland Hall,Walkway: Cleveland Spark Path,1
+The Spark,Walkway: Cleveland Spark Path,1
+The Spark,Walkway: Stadium Way and College,2
+Walkway: Cleveland Spark Path,Walkway: Stadium Way and College,2
+Walkway: Stadium Way and College,Webster Hall,1
+Walkway: Stadium Way and College,Wegner Hall,2
+Walkway: Stadium Way and College,Walkway: Stadium Way South,1
+Webster Hall,Walkway: Stadium Way South,1
+Wegner Hall,Walkway: Stadium Way South,1
+Walkway: Stadium Way South,Walkway: Vet Med West,2
+Walkway: Vet Med West,Bustad Hall,1
+Walkway: Vet Med West,Animal Disease Biotechnology Facility,2
+Walkway: Vet Med West,Walkway: Vet Med East,1
+Walkway: Vet Med East,Bustad Hall,1
+Walkway: Vet Med East,Animal Disease Biotechnology Facility,1
+Bustad Hall,Animal Disease Biotechnology Facility,1
+Daggy Hall,Walkway: Central College Mall,2
+Daggy Hall,Murrow Center,1
+Murrow Center,Goertzen Hall,1
+Murrow Center,Bryan Hall,1
+Murrow Center,Walkway: Terrell Mall West,1
+Goertzen Hall,Thompson Hall,1
+Goertzen Hall,Avery Hall,2
+Thompson Hall,Bryan Hall,1
+Bryan Hall,Avery Hall,1
+Bryan Hall,Walkway: Terrell Mall West,1
+Avery Hall,Walkway: North Campus Mall,1
+Avery Hall,Kimbrough Hall,1
+Kimbrough Hall,Walkway: North Campus Mall,1
+Kimbrough Hall,Chinook Student Center,2
+Chinook Student Center,Walkway: Chinook Plaza,1
+Walkway: Chinook Plaza,Walkway: North Campus Mall,1
+Walkway: Chinook Plaza,Smith Gym,2
+Smith Gym,Physical Education Building,1
+Physical Education Building,Walkway: North Campus Mall,2
+Walkway: North Campus Mall,Walkway: Library Mall North,2
+Walkway: Library Mall North,Terrell Library,1
+Walkway: Library Mall North,CUB,2
+Walkway: Library Mall North,Walkway: Terrell Mall Center,1
+Walkway: Terrell Mall West,College Hall,1
+Walkway: Terrell Mall West,Walkway: Terrell Mall Center,1
+College Hall,Walkway: Terrell Mall Center,1
+College Hall,Wilson-Short Hall,1
+College Hall,Todd Hall,1
+Terrell Library,Walkway: Terrell Mall Center,1
+Terrell Library,CUB,1
+Terrell Library,Walkway: Library Mall North,1
+Walkway: Terrell Mall Center,CUB,1
+Walkway: Terrell Mall Center,Walkway: CUB Plaza,1
+Walkway: CUB Plaza,CUB,1
+Walkway: CUB Plaza,The CUE,2
+Walkway: CUB Plaza,Walkway: East Mall,1
+Todd Hall,Walkway: CUB Plaza,1
+Todd Hall,The CUE,1
+The CUE,Walkway: East Mall,1
+Wilson-Short Hall,Walkway: East Mall,1
+Wilson-Short Hall,Fine Arts Center,2
+Walkway: East Mall,Fine Arts Center,1
+Walkway: East Mall,Walkway: Fine Arts Plaza,1
+Fine Arts Center,Walkway: Fine Arts Plaza,1
+Walkway: Fine Arts Plaza,Walkway: Vet Med West,2
+Johnson Annex,Walkway: Wilson Road East,1
+Hulbert Hall,Walkway: Wilson Road East,1
+Clark Hall,Hulbert Hall,1
+Clark Hall,Walkway: Wilson Road East,2
+Walkway: Wilson Road East,Walkway: East Mall,3
