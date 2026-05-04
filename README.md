@@ -17,9 +17,8 @@ Data files:
 
 - `data/campus_locations.csv` stores location names and approximate grid coordinates.
 - `data/campus_edges.csv` stores direct walking connections and edge weights.
-- Locations beginning with `Walkway:` are path junctions. They make edges follow sidewalks and plazas instead of drawing fake direct building-to-building connections.
 
-The current graph includes 34 building locations plus walkway junction nodes, including:
+The current graph includes 78 building and campus landmark locations, including:
 
 - Abelson Hall
 - Avery Hall
@@ -37,6 +36,17 @@ The current graph includes 34 building locations plus walkway junction nodes, in
 - The CUE
 - The Spark
 - Todd Hall
+- Beasley Coliseum
+- Bailey-Brayton Field
+- GESA Field at Martin Stadium
+- Mooberry Track
+- Veterinary Teaching Hospital
+- Food Service Building
+- Student Recreation Center
+- Northside Residence Hall
+- Gannon-Goldsworthy Hall
+- Stephenson Complex
+- Southside Cafe
 
 ## Algorithms
 
@@ -113,8 +123,8 @@ For the default route from `Dana` to `CUB`:
 Example weighted route:
 
 ```text
-Dana -> Carpenter Hall -> Daggy Hall -> Murrow Center -> Walkway: Terrell Mall West -> Walkway: Terrell Mall Center -> CUB
-Total cost: 6.0
+Dana -> Carpenter Hall -> Daggy Hall -> Murrow Center -> CUB
+Total cost: 4.0
 ```
 
 ## Why Dijkstra Is Better Than BFS For GPS Routing
@@ -128,7 +138,7 @@ Dijkstra's algorithm uses edge weights. This makes it a better model for real wa
 1. Review and refine the expanded building list.
 2. Add more residence halls, dining centers, athletics buildings, and campus landmarks.
 3. Improve edge weights using approximate walking distance or walking time.
-4. Add intermediate walkway or path-junction nodes for a more realistic campus graph.
+4. Replace placeholder weights with walking-time estimates from Google Maps.
 5. Possibly overlay the graph on a campus map image.
 
 When expanding the graph, use WSU's official Pullman campus map and official building or classroom lists as references for layout and building names.

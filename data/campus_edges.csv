@@ -1,86 +1,133 @@
 from,to,weight
 Albrook,Sloan Hall,2
 Sloan Hall,Electrical-Mechanical Engineering Building,1
-Sloan Hall,Walkway: West College Mall,2
-Dana,Electrical-Mechanical Engineering Building,1
+Sloan Hall,Dana,2
+Electrical-Mechanical Engineering Building,Dana,1
 Dana,Carpenter Hall,1
-Dana,Walkway: West College Mall,1
-Carpenter Hall,Walkway: West College Mall,1
 Carpenter Hall,Daggy Hall,1
 Carpenter Hall,Heald Hall,2
-Electrical-Mechanical Engineering Building,Walkway: West College Mall,2
-Walkway: West College Mall,Walkway: Central College Mall,2
-Walkway: West College Mall,Heald Hall,2
-Walkway: Central College Mall,Heald Hall,1
-Walkway: Central College Mall,Abelson Hall,1
-Walkway: Central College Mall,Walkway: Cleveland Spark Path,1
+Carpenter Hall,Abelson Hall,2
+Daggy Hall,Murrow Center,1
+Daggy Hall,Heald Hall,1
 Heald Hall,Abelson Hall,1
 Heald Hall,Cleveland Hall,1
-Abelson Hall,Fulmer Complex,1
-Abelson Hall,Todd Hall,2
-Cleveland Hall,Walkway: Cleveland Spark Path,1
-The Spark,Walkway: Cleveland Spark Path,1
-The Spark,Walkway: Stadium Way and College,2
-Walkway: Cleveland Spark Path,Walkway: Stadium Way and College,2
-Walkway: Stadium Way and College,Webster Hall,1
-Walkway: Stadium Way and College,Wegner Hall,2
-Walkway: Stadium Way and College,Walkway: Stadium Way South,1
-Webster Hall,Walkway: Stadium Way South,1
-Wegner Hall,Walkway: Stadium Way South,1
-Walkway: Stadium Way South,Walkway: Vet Med West,2
-Walkway: Vet Med West,Bustad Hall,1
-Walkway: Vet Med West,Animal Disease Biotechnology Facility,2
-Walkway: Vet Med West,Walkway: Vet Med East,1
-Walkway: Vet Med East,Bustad Hall,1
-Walkway: Vet Med East,Animal Disease Biotechnology Facility,1
+Cleveland Hall,The Spark,1
+Cleveland Hall,Webster Hall,2
+The Spark,Webster Hall,2
+Webster Hall,Wegner Hall,2
+Webster Hall,Fulmer Complex,1
+Wegner Hall,Bustad Hall,2
 Bustad Hall,Animal Disease Biotechnology Facility,1
-Daggy Hall,Walkway: Central College Mall,2
-Daggy Hall,Murrow Center,1
-Murrow Center,Goertzen Hall,1
-Murrow Center,Bryan Hall,1
-Murrow Center,Walkway: Terrell Mall West,1
-Goertzen Hall,Thompson Hall,1
-Goertzen Hall,Avery Hall,2
-Thompson Hall,Bryan Hall,1
-Bryan Hall,Avery Hall,1
-Bryan Hall,Walkway: Terrell Mall West,1
-Avery Hall,Walkway: North Campus Mall,1
-Avery Hall,Kimbrough Hall,1
-Kimbrough Hall,Walkway: North Campus Mall,1
-Kimbrough Hall,Chinook Student Center,2
-Chinook Student Center,Walkway: Chinook Plaza,1
-Walkway: Chinook Plaza,Walkway: North Campus Mall,1
-Walkway: Chinook Plaza,Smith Gym,2
-Smith Gym,Physical Education Building,1
-Physical Education Building,Walkway: North Campus Mall,2
-Walkway: North Campus Mall,Walkway: Library Mall North,2
-Walkway: Library Mall North,Terrell Library,1
-Walkway: Library Mall North,CUB,2
-Walkway: Library Mall North,Walkway: Terrell Mall Center,1
-Walkway: Terrell Mall West,College Hall,1
-Walkway: Terrell Mall West,Walkway: Terrell Mall Center,1
-College Hall,Walkway: Terrell Mall Center,1
-College Hall,Wilson-Short Hall,1
-College Hall,Todd Hall,1
-Terrell Library,Walkway: Terrell Mall Center,1
-Terrell Library,CUB,1
-Terrell Library,Walkway: Library Mall North,1
-Walkway: Terrell Mall Center,CUB,1
-Walkway: Terrell Mall Center,Walkway: CUB Plaza,1
-Walkway: CUB Plaza,CUB,1
-Walkway: CUB Plaza,The CUE,2
-Walkway: CUB Plaza,Walkway: East Mall,1
-Todd Hall,Walkway: CUB Plaza,1
+Fulmer Complex,Abelson Hall,1
+Abelson Hall,Todd Hall,2
+Todd Hall,Fulmer Complex,1
+Todd Hall,College Hall,1
 Todd Hall,The CUE,1
-The CUE,Walkway: East Mall,1
-Wilson-Short Hall,Walkway: East Mall,1
+College Hall,Wilson-Short Hall,1
+College Hall,Terrell Library,1
+College Hall,Murrow Center,1
+Wilson-Short Hall,The CUE,1
 Wilson-Short Hall,Fine Arts Center,2
-Walkway: East Mall,Fine Arts Center,1
-Walkway: East Mall,Walkway: Fine Arts Plaza,1
-Fine Arts Center,Walkway: Fine Arts Plaza,1
-Walkway: Fine Arts Plaza,Walkway: Vet Med West,2
-Johnson Annex,Walkway: Wilson Road East,1
-Hulbert Hall,Walkway: Wilson Road East,1
-Clark Hall,Hulbert Hall,1
-Clark Hall,Walkway: Wilson Road East,2
-Walkway: Wilson Road East,Walkway: East Mall,3
+The CUE,Fine Arts Center,2
+The CUE,CUB,2
+The CUE,Bustad Hall,2
+Fine Arts Center,Johnson Annex,2
+Terrell Library,CUB,1
+Terrell Library,Bryan Hall,1
+Terrell Library,Physical Education Building,2
+CUB,Bryan Hall,1
+CUB,Murrow Center,1
+Bryan Hall,Avery Hall,1
+Bryan Hall,Thompson Hall,1
+Murrow Center,Goertzen Hall,1
+Murrow Center,Thompson Hall,1
+Thompson Hall,Goertzen Hall,1
+Thompson Hall,Avery Hall,2
+Goertzen Hall,Avery Hall,2
+Avery Hall,Kimbrough Hall,1
+Avery Hall,Chinook Student Center,2
+Kimbrough Hall,Chinook Student Center,1
+Chinook Student Center,Smith Gym,2
+Smith Gym,Physical Education Building,1
+Physical Education Building,Kimbrough Hall,2
+Physical Education Building,Mooberry Track,2
+Physical Education Building,Beasley Coliseum,3
+Physical Education Building,GESA Field at Martin Stadium,3
+Johnson Annex,Hulbert Hall,2
+Johnson Annex,Clark Hall,2
+Hulbert Hall,Clark Hall,1
+Lower Soccer Field,Chinook Student Center,4
+Mooberry Track,GESA Field at Martin Stadium,1
+Mooberry Track,Beasley Coliseum,2
+GESA Field at Martin Stadium,Rogers Field,1
+GESA Field at Martin Stadium,Information Technology Building,1
+GESA Field at Martin Stadium,Beasley Coliseum,3
+Rogers Field,CUB,2
+Rogers Field,Physical Education Building,2
+Information Technology Building,The CUE,2
+Information Technology Building,Fine Arts Center,2
+Beasley Coliseum,Bailey-Brayton Field,2
+Beasley Coliseum,Taylor Sports Complex,3
+Bailey-Brayton Field,Taylor Sports Complex,1
+Bailey-Brayton Field,Tennis Courts North Fairway,2
+Taylor Sports Complex,Tennis Courts North Fairway,2
+Taylor Sports Complex,Grimes Way Playfield,4
+Grimes Way Playfield,Fine Arts Center,2
+Grimes Way Playfield,Veterinary Teaching Hospital,3
+Grimes Way Playfield, Hulbert Hall,4
+Veterinary Teaching Hospital,Wegner Hall,2
+Veterinary Teaching Hospital,Bustad Hall,2
+Veterinary Teaching Hospital,McEachern Residence Center - East,2
+Rogers-Orton Field,Veterinary Teaching Hospital,4
+Veterinary Teaching Hospital,Hitchcock Equine Track,4
+Hitchcock Equine Track,Grimes Way Playfield,4
+Grimes Way Playfield,Food Service Building,5
+Food Service Building,Cattle Feeding Lab,1
+Food Service Building,Isolation Building,2
+Cattle Feeding Lab,Isolation Building,1
+Food Service Building,Compost Site,4
+Compost Site,Compost Bedding Storage Building,1
+Student Recreation Center,Beasley Coliseum,2
+Student Recreation Center,Streit-Perham Hall,1
+Student Recreation Center,Mooberry Track,2
+Streit-Perham Hall,Beasley Coliseum,2
+Streit-Perham Hall,Mooberry Track,2
+Northside Residence Hall,Chinook Student Center,1
+Northside Residence Hall,Global Scholars Hall,1
+Northside Residence Hall,Northside Cafe,1
+Global Scholars Hall,Chinook Student Center,1
+Global Scholars Hall,Northside Cafe,1
+Regents Hill Hall,Scott-Coman Hall,1
+Regents Hill Hall,Goertzen Hall,1
+Regents Hill Hall,Thompson Hall,1
+Scott-Coman Hall,Community-Duncan Dunn Hall,1
+Scott-Coman Hall,Goertzen Hall,1
+Community-Duncan Dunn Hall,Elmina White Honors Hall,1
+Community-Duncan Dunn Hall,Dana,2
+Elmina White Honors Hall,McCroskey Hall,1
+Elmina White Honors Hall,Daggy Hall,1
+McCroskey Hall,Hillside Cafe,1
+McCroskey Hall,Daggy Hall,1
+Hillside Cafe,Murrow Center,1
+Hillside Cafe,Goertzen Hall,1
+Gannon-Goldsworthy Hall,Southside Cafe,1
+Gannon-Goldsworthy Hall,Stephenson Complex,1
+Stimson Hall,The Spark,1
+The Spark,Gannon-Goldsworthy Hall,2
+Stimson Hall,Cleveland Hall,2
+Stephenson Complex,Southside Cafe,1
+Southside Cafe,Southside Market,1
+Southside Cafe,McEachern Residence Center - East,1
+Southside Market,The Spark,2
+Olympia Hall,Grimes Way Playfield,3
+Olympia Hall,Veterinary Teaching Hospital,3
+Olympia Hall,Hitchcock Equine Track,3
+Rogers Hall,Rogers-Orton Field,1
+Rogers Hall,Orton Hall,1
+Rogers Hall,McEachern Residence Center - East,2
+Orton Hall,Rogers-Orton Field,1
+Orton Hall,McEachern Residence Center - East,3
+Lighty Student Services Building,CUB,1
+Lighty Student Services Building,French Administration Building,1
+French Administration Building,Information Technology Building,1
+French Administration Building,The CUE,2

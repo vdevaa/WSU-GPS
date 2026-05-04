@@ -34,17 +34,30 @@ def write_locations(path, rows):
 
 def calibrate_locations(map_image_path, input_csv, output_csv):
     """Prompt the user to click each building on the map image."""
+    calibrate_selected_locations(map_image_path, input_csv, output_csv)
+
+
+def calibrate_selected_locations(map_image_path, input_csv, output_csv, only=None):
+    """Prompt the user to click selected building locations on the map image."""
     rows = read_locations(input_csv)
     image = plt.imread(map_image_path)
     height, width = image.shape[:2]
     calibrated = []
+    selected = set(only or [])
 
-    print("Click each building location on the map.")
+    if selected:
+        print("Click only the selected building locations on the map.")
+    else:
+        print("Click each building location on the map.")
     print("Close the map window at any time to stop early.")
     print("If you skip a point, the old CSV coordinate is kept.\n")
 
     for row in rows:
         name = row["name"]
+
+        if selected and name not in selected:
+            calibrated.append(row)
+            continue
 
         plt.clf()
         plt.imshow(image, extent=(0, width, height, 0))
@@ -90,12 +103,18 @@ def main():
         default=DEFAULT_OUTPUT,
         help="Output calibrated CSV. Default: data/campus_locations_calibrated.csv",
     )
+    parser.add_argument(
+        "--only",
+        nargs="+",
+        help="Only recalibrate these exact location names.",
+    )
     args = parser.parse_args()
 
-    calibrate_locations(
+    calibrate_selected_locations(
         args.map_image,
         Path(args.input),
         Path(args.output),
+        only=args.only,
     )
 
 
