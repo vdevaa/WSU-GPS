@@ -1,8 +1,15 @@
-"""Command-line entry point for the Phase 1 WSU-GPS project."""
+"""Command-line entry point for the WSU-GPS project."""
+
+from pathlib import Path
 
 from algorithms import bfs_shortest_path, dijkstra
 from graph_data import build_graph
+from map_overlay import draw_graph_on_map
 from visualize import draw_graph
+
+
+MAP_IMAGE = Path(__file__).parent / "data" / "wsu_pullman_map.png"
+OVERLAY_OUTPUT = Path(__file__).parent / "output" / "map_overlay.png"
 
 
 def choose_location(prompt, default):
@@ -45,7 +52,19 @@ def main():
     print()
     print_result("Dijkstra weighted shortest route", dijkstra_path, dijkstra_cost)
 
-    draw_graph(graph, dijkstra_path)
+    if MAP_IMAGE.exists():
+        draw_graph_on_map(
+            graph,
+            MAP_IMAGE,
+            path=dijkstra_path,
+            save_path=OVERLAY_OUTPUT,
+        )
+    else:
+        print()
+        print(f"Map image not found: {MAP_IMAGE}")
+        print("Showing the plain graph layout instead.")
+        print("To see the campus map overlay, save the map image at that path.")
+        draw_graph(graph, dijkstra_path)
 
 
 if __name__ == "__main__":
