@@ -18,9 +18,7 @@ class WebAppTests(unittest.TestCase):
         self.assertEqual(payload["image"]["url"], "/map-image")
 
     def test_route_api_returns_dijkstra_route(self):
-        response = self.client.get(
-            "/api/route?start=Dana&end=CUB&algorithm=dijkstra"
-        )
+        response = self.client.get("/api/route?start=Dana&end=CUB")
         payload = response.get_json()
 
         self.assertEqual(response.status_code, 200)
@@ -33,7 +31,7 @@ class WebAppTests(unittest.TestCase):
 
     def test_route_api_reports_unknown_location(self):
         response = self.client.get(
-            "/api/route?start=Not%20A%20Building&end=CUB&algorithm=dijkstra"
+            "/api/route?start=Not%20A%20Building&end=CUB"
         )
         payload = response.get_json()
 

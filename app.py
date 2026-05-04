@@ -5,7 +5,7 @@ import struct
 
 from flask import Flask, jsonify, render_template, request, send_file
 
-from algorithms import bfs_shortest_path, dijkstra
+from algorithms import dijkstra
 from graph_data import build_graph
 
 
@@ -78,18 +78,11 @@ def api_graph():
 def api_route():
     start = request.args.get("start", "").strip()
     end = request.args.get("end", "").strip()
-    algorithm = request.args.get("algorithm", "dijkstra").strip().lower()
-
-    if algorithm == "bfs":
-        route, cost = bfs_shortest_path(graph, start, end)
-        algorithm_name = "BFS"
-    else:
-        route, cost = dijkstra(graph, start, end)
-        algorithm_name = "Dijkstra"
+    route, cost = dijkstra(graph, start, end)
 
     return jsonify(
         {
-            "algorithm": algorithm_name,
+            "algorithm": "Dijkstra",
             "start": start,
             "end": end,
             "path": route or [],

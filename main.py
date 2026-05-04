@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from algorithms import bfs_shortest_path, dijkstra
+from algorithms import dijkstra
 from graph_data import build_graph
 from map_overlay import draw_graph_on_map
 from visualize import draw_graph
@@ -41,16 +41,13 @@ def main():
     print()
 
     try:
-        bfs_path, bfs_cost = bfs_shortest_path(graph, start, end)
         dijkstra_path, dijkstra_cost = dijkstra(graph, start, end)
     except ValueError as error:
         print(f"Error: {error}")
         print("Please choose one of the available locations listed above.")
         return
 
-    print_result("BFS fewest-segments route", bfs_path, bfs_cost)
-    print()
-    print_result("Dijkstra weighted shortest route", dijkstra_path, dijkstra_cost)
+    print_result("Dijkstra route", dijkstra_path, dijkstra_cost)
 
     if MAP_IMAGE.exists():
         draw_graph_on_map(

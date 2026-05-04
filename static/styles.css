@@ -84,35 +84,6 @@ input {
   border-color: var(--accent);
 }
 
-.algorithm-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-.algorithm-tabs input {
-  position: absolute;
-  opacity: 0;
-}
-
-.algorithm-tabs span {
-  display: block;
-  text-align: center;
-  border: 1px solid #cbd5c0;
-  border-radius: 6px;
-  padding: 9px 8px;
-  color: #344054;
-  background: #fbfcfa;
-  cursor: pointer;
-}
-
-.algorithm-tabs input:checked + span {
-  color: white;
-  border-color: var(--accent);
-  background: var(--accent);
-}
-
 .button-row {
   display: grid;
   grid-template-columns: 96px 1fr;

@@ -4,7 +4,6 @@ NetworkX stores the graph, but the traversal and pathfinding logic is written
 directly here for graph theory coursework.
 """
 
-from collections import deque
 from heapq import heappop, heappush
 
 
@@ -26,32 +25,6 @@ def path_cost(graph, path):
     return total
 
 
-def bfs_shortest_path(graph, start, end):
-    """Find an unweighted shortest path using breadth-first search.
-
-    BFS explores the graph one layer at a time. In this project, it returns the
-    route with the fewest walking segments, ignoring edge weights.
-    """
-    validate_nodes(graph, start, end)
-
-    queue = deque([[start]])
-    visited = {start}
-
-    while queue:
-        path = queue.popleft()
-        current = path[-1]
-
-        if current == end:
-            return path, path_cost(graph, path)
-
-        for neighbor in graph.neighbors(current):
-            if neighbor not in visited:
-                visited.add(neighbor)
-                queue.append(path + [neighbor])
-
-    return None, None
-
-
 def dijkstra(graph, start, end):
     """Find the lowest-cost path using Dijkstra's algorithm.
 
@@ -61,6 +34,7 @@ def dijkstra(graph, start, end):
     """
     validate_nodes(graph, start, end)
 
+    # init strcutures and priority queue
     distances = {node: float("inf") for node in graph.nodes}
     previous = {node: None for node in graph.nodes}
     distances[start] = 0
@@ -74,10 +48,10 @@ def dijkstra(graph, start, end):
         if current in visited:
             continue
 
-        visited.add(current)
+        visited.add(current) # have not visited yet
 
         if current == end:
-            break
+            break # popping end node
 
         for neighbor in graph.neighbors(current):
             edge_weight = graph[current][neighbor]["weight"]

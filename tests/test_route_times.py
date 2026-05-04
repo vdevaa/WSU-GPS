@@ -1,6 +1,6 @@
 import unittest
 
-from algorithms import bfs_shortest_path, dijkstra, path_cost
+from algorithms import dijkstra, path_cost
 from graph_data import build_graph
 
 
@@ -76,22 +76,6 @@ class RouteTimeTests(unittest.TestCase):
                 self.assertEqual(path, expected_path)
                 self.assertEqual(time, expected_time)
                 self.assertEqual(path_cost(self.graph, path), expected_time)
-
-    def test_dijkstra_route_time_is_not_more_than_bfs(self):
-        cases = [
-            ("Dana", "CUB"),
-            ("Student Recreation Center", "CUB"),
-            ("Northside Residence Hall", "CUB"),
-            ("Food Service Building", "CUB"),
-            ("Lighty Student Services Building", "Dana"),
-        ]
-
-        for start, end in cases:
-            with self.subTest(start=start, end=end):
-                _, bfs_time = bfs_shortest_path(self.graph, start, end)
-                _, dijkstra_time = dijkstra(self.graph, start, end)
-
-                self.assertLessEqual(dijkstra_time, bfs_time)
 
     def test_unknown_location_raises_clear_error(self):
         with self.assertRaisesRegex(ValueError, "Unknown location"):

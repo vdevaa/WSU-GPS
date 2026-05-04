@@ -33,10 +33,6 @@ function routeEdgeKey(start, end) {
   return [start, end].sort().join("||");
 }
 
-function currentAlgorithm() {
-  return new FormData(routeForm).get("algorithm") || "dijkstra";
-}
-
 function setEndpoint(nodeId) {
   if (state.picking === "start") {
     startInput.value = nodeId;
@@ -156,7 +152,6 @@ async function findRoute() {
   const params = new URLSearchParams({
     start: state.start,
     end: state.end,
-    algorithm: currentAlgorithm(),
   });
 
   const response = await fetch(`/api/route?${params}`);
