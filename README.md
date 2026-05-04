@@ -74,6 +74,28 @@ python main.py
 
 The program lists available locations and asks for a start and destination. Press Enter twice to use the default example route from `Dana` to `CUB`.
 
+Run the web UI:
+
+```bash
+python app.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5000
+```
+
+The browser UI provides searchable building inputs, clickable map nodes, Dijkstra/BFS route selection, and route-only labels to reduce map clutter.
+
+Run the tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The route-time tests check that the current edge weights produce expected Dijkstra travel costs for several campus routes.
+
 ## Verifying The Map
 
 The current coordinates are approximate. To verify and correct them, save an official WSU Pullman map image as:

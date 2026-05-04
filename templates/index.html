@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WSU-GPS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>WSU-GPS</h1>
+          <p>Campus routing</p>
+        </div>
+
+        <form id="route-form" class="route-form">
+          <label for="start-input">Start</label>
+          <input id="start-input" name="start" list="location-options" value="Dana" autocomplete="off">
+
+          <label for="end-input">Destination</label>
+          <input id="end-input" name="end" list="location-options" value="CUB" autocomplete="off">
+
+          <datalist id="location-options">
+            {% for location in locations %}
+              <option value="{{ location }}"></option>
+            {% endfor %}
+          </datalist>
+
+          <div class="algorithm-tabs" role="radiogroup" aria-label="Algorithm">
+            <label>
+              <input type="radio" name="algorithm" value="dijkstra" checked>
+              <span>Dijkstra</span>
+            </label>
+            <label>
+              <input type="radio" name="algorithm" value="bfs">
+              <span>BFS</span>
+            </label>
+          </div>
+
+          <div class="button-row">
+            <button type="button" id="swap-button" class="secondary-button">Swap</button>
+            <button type="submit" class="primary-button">Find Route</button>
+          </div>
+        </form>
+
+        <section class="route-summary" aria-live="polite">
+          <div class="summary-line">
+            <span>Route time</span>
+            <strong id="route-cost">--</strong>
+          </div>
+          <ol id="route-list"></ol>
+          <p id="route-error" class="error-text"></p>
+        </section>
+      </aside>
+
+      <section class="map-panel">
+        <div id="map-stage" class="map-stage">
+          <img id="map-image" alt="WSU Pullman campus map">
+          <svg id="map-overlay" aria-label="Campus graph"></svg>
+          <div id="map-tooltip" class="map-tooltip" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f5f2;
+  --panel: #ffffff;
+  --ink: #1f2933;
+  --muted: #667085;
+  --line: #d9ded4;
+  --route: #d3183f;
+  --node: #f7c948;
+  --node-border: #2f2f2f;
+  --accent: #276749;
+  --accent-strong: #1f513a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: auto;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.brand p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.route-form {
+  display: grid;
+  gap: 10px;
+}
+
+.route-form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #344054;
+}
+
+.route-form input[type="text"],
+.route-form input[list] {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #cbd5c0;
+  border-radius: 6px;
+  padding: 9px 11px;
+  color: var(--ink);
+  background: #fbfcfa;
+}
+
+.route-form input:focus {
+  outline: 3px solid rgba(39, 103, 73, 0.18);
+  border-color: var(--accent);
+}
+
+.algorithm-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.algorithm-tabs input {
+  position: absolute;
+  opacity: 0;
+}
+
+.algorithm-tabs span {
+  display: block;
+  text-align: center;
+  border: 1px solid #cbd5c0;
+  border-radius: 6px;
+  padding: 9px 8px;
+  color: #344054;
+  background: #fbfcfa;
+  cursor: pointer;
+}
+
+.algorithm-tabs input:checked + span {
+  color: white;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 42px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-button {
+  color: white;
+  background: var(--accent);
+}
+
+.primary-button:hover {
+  background: var(--accent-strong);
+}
+
+.secondary-button {
+  color: #344054;
+  background: #eef2ea;
+  border-color: #cbd5c0;
+}
+
+.route-summary {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.summary-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.summary-line strong {
+  color: var(--ink);
+  font-size: 28px;
+}
+
+#route-list {
+  margin: 16px 0 0;
+  padding-left: 22px;
+  line-height: 1.45;
+}
+
+#route-list li {
+  margin: 7px 0;
+}
+
+.error-text {
+  color: #b42318;
+  font-weight: 700;
+}
+
+.map-panel {
+  padding: 14px;
+  min-width: 0;
+}
+
+.map-stage {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 28px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #dde5d0;
+}
+
+#map-image,
+#map-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#map-image {
+  object-fit: contain;
+}
+
+#map-overlay {
+  overflow: visible;
+}
+
+.edge {
+  stroke: rgba(20, 25, 20, 0.22);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.edge.route {
+  stroke: var(--route);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.node {
+  cursor: pointer;
+  vector-effect: non-scaling-stroke;
+}
+
+.node.building {
+  fill: var(--node);
+  stroke: var(--node-border);
+  stroke-width: 1;
+}
+
+.node.walkway {
+  fill: #edf0e7;
+  stroke: #78806f;
+  stroke-width: 0.7;
+}
+
+.node.selected {
+  fill: var(--route);
+  stroke: white;
+  stroke-width: 2.5;
+}
+
+.node.route-node {
+  fill: #ffffff;
+  stroke: var(--route);
+  stroke-width: 2;
+}
+
+.route-label {
+  fill: #1f2933;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  font-size: 13px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.map-tooltip {
+  position: absolute;
+  z-index: 3;
+  max-width: 240px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  color: white;
+  background: rgba(31, 41, 51, 0.92);
+  font-size: 13px;
+  pointer-events: none;
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .map-panel {
+    padding: 10px;
+  }
+
+  .map-stage {
+    height: 68vh;
+  }
+}
